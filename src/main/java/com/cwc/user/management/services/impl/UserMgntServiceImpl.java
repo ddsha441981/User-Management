@@ -22,7 +22,6 @@ public class UserMgntServiceImpl implements UserMgntService {
     public User addUserDetails(User user) {
         //generated id
         String userId = UUID.randomUUID().toString();
-        System.out.println("////////////////////////////" + userId);
         UserMgnt userMgnt =  new UserMgnt();
         user.setUserId(userId);
 

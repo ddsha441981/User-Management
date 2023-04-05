@@ -11,12 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/")
+@CrossOrigin(value = "http://localhost:3000/")
+@RequestMapping("/api/v1/users")
 public class UserMgntController {
     @Autowired
     UserMgntService userMgntService;
 
-    @PostMapping("/users")
+    @PostMapping("/")
     public ResponseEntity<User> saveUser(@RequestBody User user){
         userMgntService.addUserDetails(user);
         return ResponseEntity.ok(user);
